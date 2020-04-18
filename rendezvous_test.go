@@ -1,13 +1,15 @@
-package lilsem
+package lilsem_test
 
 import (
 	"math/rand"
 	"testing"
+
+	"github.com/arhyth/lilsem"
 )
 
 func TestRendezvous(t *testing.T) {
 	count := rand.Intn(101)
-	r := Rendezvous(count)
+	r := lilsem.Rendezvous(count)
 
 	var collected int
 	for i := 1; i <= count; i++ {
